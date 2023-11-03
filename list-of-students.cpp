@@ -30,38 +30,38 @@ void sozdfile()
 	Person stud;
 	if ((!fout.is_open()) || (!fout4.is_open()))
 	{
-		cout << "îøèáêà îòêðûòèÿ ôàéëà.";
+		cout << "Ã®Ã¸Ã¨Ã¡ÃªÃ  Ã®Ã²ÃªÃ°Ã»Ã²Ã¨Ã¿ Ã´Ã Ã©Ã«Ã .";
 	}
 	else
 	{
-		cout << "Ñêîëüêî ñòóäåíòîâ âñåãî?" << endl;
+		cout << "Ã‘ÃªÃ®Ã«Ã¼ÃªÃ® Ã±Ã²Ã³Ã¤Ã¥Ã­Ã²Ã®Ã¢ Ã¢Ã±Ã¥Ã£Ã®?" << endl;
 		int kol_of_stud;
 		cin >> kol_of_stud;
 		for (int i = 1; i <= kol_of_stud; i++)
 		{
-			cout << "Ôàìèëèÿ:" << endl;
+			cout << "Ã”Ã Ã¬Ã¨Ã«Ã¨Ã¿:" << endl;
 			cin >> stud.fam;
-			cout << "Èìÿ" << endl;
+			cout << "ÃˆÃ¬Ã¿" << endl;
 			cin >> stud.im;
 			stud.im_inic[0] = stud.im[0];
 			stud.im_inic[1] = '.';
 			stud.im_inic[2] = '\0';
-			cout << "Îò÷åñòâî:" << endl;
+			cout << "ÃŽÃ²Ã·Ã¥Ã±Ã²Ã¢Ã®:" << endl;
 			cin >> stud.otch;
 			stud.otch_inic[0] = stud.otch[0];
 			stud.otch_inic[1] = '.';
 			stud.otch_inic[2] = '\0';
-			cout << "Ãîä ðîæäåíèÿ" << endl;
+			cout << "ÃƒÃ®Ã¤ Ã°Ã®Ã¦Ã¤Ã¥Ã­Ã¨Ã¿" << endl;
 			cin >> stud.brthd;
-			cout << "íîìåð ãðóïïû:" << endl;
+			cout << "Ã­Ã®Ã¬Ã¥Ã° Ã£Ã°Ã³Ã¯Ã¯Ã»:" << endl;
 			cin >> stud.gr;
-			cout << "Îöåíêà ïî ôèçèêå:" << endl;
+			cout << "ÃŽÃ¶Ã¥Ã­ÃªÃ  Ã¯Ã® Ã´Ã¨Ã§Ã¨ÃªÃ¥:" << endl;
 			cin >> stud.fiz;
-			cout << "îöåíêà ïî ìàòåìàòèêå:" << endl;
+			cout << "Ã®Ã¶Ã¥Ã­ÃªÃ  Ã¯Ã® Ã¬Ã Ã²Ã¥Ã¬Ã Ã²Ã¨ÃªÃ¥:" << endl;
 			cin >> stud.mat;
-			cout << "îöåíêà ïî èíôîðìàòèêå:" << endl;
+			cout << "Ã®Ã¶Ã¥Ã­ÃªÃ  Ã¯Ã® Ã¨Ã­Ã´Ã®Ã°Ã¬Ã Ã²Ã¨ÃªÃ¥:" << endl;
 			cin >> stud.inf;
-			cout << "îöåíêà ïî õèìèè:" << endl;
+			cout << "Ã®Ã¶Ã¥Ã­ÃªÃ  Ã¯Ã® ÃµÃ¨Ã¬Ã¨Ã¨:" << endl;
 			cin >> stud.chem;
 
 			stud.sr = (stud.chem + stud.inf + stud.mat + stud.fiz) / 4;
@@ -69,22 +69,22 @@ void sozdfile()
 			OemToCharA(stud.im_inic, stud.im_inic);
 			OemToCharA(stud.otch_inic, stud.otch_inic);
 			fout <<
-				"ÔÈÎ: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
-				"Ãîä ðîæäåíèÿ: " << stud.brthd << endl <<
-				"Íîìåð ãðóïïû: " << stud.gr << endl <<
-				"îöåíêè çà ñåìåñòð" << endl <<
-				"Ôèçèêà: " << stud.fiz << endl <<
-				"Ìàòåìàòèêà: " << stud.mat << endl <<
-				"Èíôîðìàòèêà: " << stud.inf << endl <<
-				"Õèìèÿ: " << stud.chem << endl <<
-				"Ñðåäíèé áàëë: " << stud.sr << endl << endl;
+				"Ã”ÃˆÃŽ: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
+				"ÃƒÃ®Ã¤ Ã°Ã®Ã¦Ã¤Ã¥Ã­Ã¨Ã¿: " << stud.brthd << endl <<
+				"ÃÃ®Ã¬Ã¥Ã° Ã£Ã°Ã³Ã¯Ã¯Ã»: " << stud.gr << endl <<
+				"Ã®Ã¶Ã¥Ã­ÃªÃ¨ Ã§Ã  Ã±Ã¥Ã¬Ã¥Ã±Ã²Ã°" << endl <<
+				"Ã”Ã¨Ã§Ã¨ÃªÃ : " << stud.fiz << endl <<
+				"ÃŒÃ Ã²Ã¥Ã¬Ã Ã²Ã¨ÃªÃ : " << stud.mat << endl <<
+				"ÃˆÃ­Ã´Ã®Ã°Ã¬Ã Ã²Ã¨ÃªÃ : " << stud.inf << endl <<
+				"Ã•Ã¨Ã¬Ã¨Ã¿: " << stud.chem << endl <<
+				"Ã‘Ã°Ã¥Ã¤Ã­Ã¨Ã© Ã¡Ã Ã«Ã«: " << stud.sr << endl << endl;
 
 			if (((stud.fiz == 4) || (stud.fiz == 5)) && (stud.mat > 8) && (stud.chem > 8) && (stud.inf > 8))
 			{
 				fout4 <<
-					"ÔÈÎ: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
-					"Ãîä ðîæäåíèÿ: " << stud.brthd << endl <<
-					"Íîìåð ãðóïïû: " << stud.gr << endl << endl;
+					"Ã”ÃˆÃŽ: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
+					"ÃƒÃ®Ã¤ Ã°Ã®Ã¦Ã¤Ã¥Ã­Ã¨Ã¿: " << stud.brthd << endl <<
+					"ÃÃ®Ã¬Ã¥Ã° Ã£Ã°Ã³Ã¯Ã¯Ã»: " << stud.gr << endl << endl;
 			}
 		}
 
@@ -103,7 +103,7 @@ void prosmotr()
 	fin.open("myFILE.txt");
 	if (!fin.is_open())
 	{
-		cout << "Îøèáêà ÷òåíèÿ ôàéëà." << endl;
+		cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã·Ã²Ã¥Ã­Ã¨Ã¿ Ã´Ã Ã©Ã«Ã ." << endl;
 	}
 	else
 	{
@@ -128,38 +128,38 @@ void add_inf()
 	Person stud;
 	if (!fout.is_open() || !fout4.is_open())
 	{
-		cout << "îøèáêà îòêðûòèÿ ôàéëà.";
+		cout << "Ã®Ã¸Ã¨Ã¡ÃªÃ  Ã®Ã²ÃªÃ°Ã»Ã²Ã¨Ã¿ Ã´Ã Ã©Ã«Ã .";
 	}
 	else
 	{
-		cout << "Ñêîëüêî ñòóäåíòîâ íóæíî äîáàâèòü?" << endl;
+		cout << "Ã‘ÃªÃ®Ã«Ã¼ÃªÃ® Ã±Ã²Ã³Ã¤Ã¥Ã­Ã²Ã®Ã¢ Ã­Ã³Ã¦Ã­Ã® Ã¤Ã®Ã¡Ã Ã¢Ã¨Ã²Ã¼?" << endl;
 		int kol_of_stud;
 		cin >> kol_of_stud;
 		for (int i = 1; i <= kol_of_stud; i++)
 		{
-			cout << "Ôàìèëèÿ:" << endl;
+			cout << "Ã”Ã Ã¬Ã¨Ã«Ã¨Ã¿:" << endl;
 			cin >> stud.fam;
-			cout << "Èìÿ" << endl;
+			cout << "ÃˆÃ¬Ã¿" << endl;
 			cin >> stud.im;
 			stud.im_inic[0] = stud.im[0];
 			stud.im_inic[1] = '.';
 			stud.im_inic[2] = '\0';
-			cout << "Îò÷åñòâî:" << endl;
+			cout << "ÃŽÃ²Ã·Ã¥Ã±Ã²Ã¢Ã®:" << endl;
 			cin >> stud.otch;
 			stud.otch_inic[0] = stud.otch[0];
 			stud.otch_inic[1] = '.';
 			stud.otch_inic[2] = '\0';
-			cout << "Ãîä ðîæäåíèÿ" << endl;
+			cout << "ÃƒÃ®Ã¤ Ã°Ã®Ã¦Ã¤Ã¥Ã­Ã¨Ã¿" << endl;
 			cin >> stud.brthd;
-			cout << "íîìåð ãðóïïû:" << endl;
+			cout << "Ã­Ã®Ã¬Ã¥Ã° Ã£Ã°Ã³Ã¯Ã¯Ã»:" << endl;
 			cin >> stud.gr;
-			cout << "Îöåíêà ïî ôèçèêå:" << endl;
+			cout << "ÃŽÃ¶Ã¥Ã­ÃªÃ  Ã¯Ã® Ã´Ã¨Ã§Ã¨ÃªÃ¥:" << endl;
 			cin >> stud.fiz;
-			cout << "îöåíêà ïî ìàòåìàòèêå:" << endl;
+			cout << "Ã®Ã¶Ã¥Ã­ÃªÃ  Ã¯Ã® Ã¬Ã Ã²Ã¥Ã¬Ã Ã²Ã¨ÃªÃ¥:" << endl;
 			cin >> stud.mat;
-			cout << "îöåíêà ïî èíôîðìàòèêå:" << endl;
+			cout << "Ã®Ã¶Ã¥Ã­ÃªÃ  Ã¯Ã® Ã¨Ã­Ã´Ã®Ã°Ã¬Ã Ã²Ã¨ÃªÃ¥:" << endl;
 			cin >> stud.inf;
-			cout << "îöåíêà ïî õèìèè:" << endl;
+			cout << "Ã®Ã¶Ã¥Ã­ÃªÃ  Ã¯Ã® ÃµÃ¨Ã¬Ã¨Ã¨:" << endl;
 			cin >> stud.chem;
 
 			stud.sr = (stud.chem + stud.inf + stud.mat + stud.fiz) / 4;
@@ -167,22 +167,22 @@ void add_inf()
 			OemToCharA(stud.im_inic, stud.im_inic);
 			OemToCharA(stud.otch_inic, stud.otch_inic);
 			fout <<
-				"ÔÈÎ: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
-				"Ãîä ðîæäåíèÿ: " << stud.brthd << endl <<
-				"Íîìåð ãðóïïû: " << stud.gr << endl <<
-				"îöåíêè çà ñåìåñòð" << endl <<
-				"Ôèçèêà: " << stud.fiz << endl <<
-				"Ìàòåìàòèêà: " << stud.mat << endl <<
-				"Èíôîðìàòèêà: " << stud.inf << endl <<
-				"Õèìèÿ: " << stud.chem << endl <<
-				"Ñðåäíèé áàëë: " << stud.sr << endl << endl;
+				"Ã”ÃˆÃŽ: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
+				"ÃƒÃ®Ã¤ Ã°Ã®Ã¦Ã¤Ã¥Ã­Ã¨Ã¿: " << stud.brthd << endl <<
+				"ÃÃ®Ã¬Ã¥Ã° Ã£Ã°Ã³Ã¯Ã¯Ã»: " << stud.gr << endl <<
+				"Ã®Ã¶Ã¥Ã­ÃªÃ¨ Ã§Ã  Ã±Ã¥Ã¬Ã¥Ã±Ã²Ã°" << endl <<
+				"Ã”Ã¨Ã§Ã¨ÃªÃ : " << stud.fiz << endl <<
+				"ÃŒÃ Ã²Ã¥Ã¬Ã Ã²Ã¨ÃªÃ : " << stud.mat << endl <<
+				"ÃˆÃ­Ã´Ã®Ã°Ã¬Ã Ã²Ã¨ÃªÃ : " << stud.inf << endl <<
+				"Ã•Ã¨Ã¬Ã¨Ã¿: " << stud.chem << endl <<
+				"Ã‘Ã°Ã¥Ã¤Ã­Ã¨Ã© Ã¡Ã Ã«Ã«: " << stud.sr << endl << endl;
 
 			if (((stud.fiz == 4) || (stud.fiz == 5)) && (stud.mat > 8) && (stud.chem > 8) && (stud.inf > 8))
 			{
 				fout4 <<
-					"ÔÈÎ: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
-					"Ãîä ðîæäåíèÿ: " << stud.brthd << endl <<
-					"Íîìåð ãðóïïû: " << stud.gr << endl << endl;
+					"Ã”ÃˆÃŽ: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
+					"ÃƒÃ®Ã¤ Ã°Ã®Ã¦Ã¤Ã¥Ã­Ã¨Ã¿: " << stud.brthd << endl <<
+					"ÃÃ®Ã¬Ã¥Ã° Ã£Ã°Ã³Ã¯Ã¯Ã»: " << stud.gr << endl << endl;
 			}
 		}
 
@@ -217,7 +217,7 @@ void clear()
 	fout4.open("task.txt");
 	if (!fout.is_open() && !fout4.is_open())
 	{
-		cout << "Îøèáêà îòêðûòèÿ ôàéëà." << endl;
+		cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ  Ã®Ã²ÃªÃ°Ã»Ã²Ã¨Ã¿ Ã´Ã Ã©Ã«Ã ." << endl;
 	}
 	else
 	{
@@ -226,7 +226,7 @@ void clear()
 	}
 	fout.close();
 	fout4.close();
-	cout << "Ôàéëû î÷èùåíû." << endl;
+	cout << "Ã”Ã Ã©Ã«Ã» Ã®Ã·Ã¨Ã¹Ã¥Ã­Ã»." << endl;
 	system("pause");
 	system("cls");
 }
@@ -242,7 +242,7 @@ void edit()
 
 bool exit()
 {
-	cout << "Äî ñâèäàíèÿ." << endl;
+	cout << "Ã„Ã® Ã±Ã¢Ã¨Ã¤Ã Ã­Ã¨Ã¿." << endl;
 	return 0;
 }
 
@@ -253,7 +253,7 @@ int main()
 	int cikl = 1;
 	while (cikl == 1)
 	{
-		cout << " Âûáåðè ïóíêò:\n 1. Ñîçäàòü ôàéë.\n 2. Ïðîñìîòð.\n 3. Äîáàâèòü èíôîðìàöèþ.\n 4. Ðàñïå÷àòàòü àíêåòíûå äàííûå ñòóäåíòîâ, èìåþùèõ îöåíêè 4 èëè 5 ïî ôèçèêå è îöåíêó áîëüøå 8 ïî îñòàëüíûì ïðåäìåòàì\n 5. Î÷èñèòü ôàéë. \n 6. Ðåäàêòèðîâàòü \n 7. Âûõîä\n" << endl;
+		cout << " Ã‚Ã»Ã¡Ã¥Ã°Ã¨ Ã¯Ã³Ã­ÃªÃ²:\n 1. Ã‘Ã®Ã§Ã¤Ã Ã²Ã¼ Ã´Ã Ã©Ã«.\n 2. ÃÃ°Ã®Ã±Ã¬Ã®Ã²Ã°.\n 3. Ã„Ã®Ã¡Ã Ã¢Ã¨Ã²Ã¼ Ã¨Ã­Ã´Ã®Ã°Ã¬Ã Ã¶Ã¨Ã¾.\n 4. ÃÃ Ã±Ã¯Ã¥Ã·Ã Ã²Ã Ã²Ã¼ Ã Ã­ÃªÃ¥Ã²Ã­Ã»Ã¥ Ã¤Ã Ã­Ã­Ã»Ã¥ Ã±Ã²Ã³Ã¤Ã¥Ã­Ã²Ã®Ã¢, Ã¨Ã¬Ã¥Ã¾Ã¹Ã¨Ãµ Ã®Ã¶Ã¥Ã­ÃªÃ¨ 4 Ã¨Ã«Ã¨ 5 Ã¯Ã® Ã´Ã¨Ã§Ã¨ÃªÃ¥ Ã¨ Ã®Ã¶Ã¥Ã­ÃªÃ³ Ã¡Ã®Ã«Ã¼Ã¸Ã¥ 8 Ã¯Ã® Ã®Ã±Ã²Ã Ã«Ã¼Ã­Ã»Ã¬ Ã¯Ã°Ã¥Ã¤Ã¬Ã¥Ã²Ã Ã¬\n 5. ÃŽÃ·Ã¨Ã±Ã¨Ã²Ã¼ Ã´Ã Ã©Ã«. \n 6. ÃÃ¥Ã¤Ã ÃªÃ²Ã¨Ã°Ã®Ã¢Ã Ã²Ã¼ \n 7. Ã‚Ã»ÃµÃ®Ã¤\n" << endl;
 		choice = _getch();
 
 		switch (choice)
@@ -265,7 +265,7 @@ int main()
 		case '5': system("cls"); clear(); break;
 		case '6': system("cls"); edit(); break;
 		case '7': system("cls"); cikl = exit(); break;
-		default:  system("cls"); cout << "âûáåðè öèôðó îò 1 äî 6!" << endl;
+		default:  system("cls"); cout << "Ã¢Ã»Ã¡Ã¥Ã°Ã¨ Ã¶Ã¨Ã´Ã°Ã³ Ã®Ã² 1 Ã¤Ã® 6!" << endl;
 		}
 	} 
 	return 0;
