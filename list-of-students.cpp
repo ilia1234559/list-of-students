@@ -39,29 +39,29 @@ void sozdfile()
 		cin >> kol_of_stud;
 		for (int i = 1; i <= kol_of_stud; i++)
 		{
-			cout << "Ôàìèëèÿ:" << endl;
+			cout << "Фамилия:" << endl;
 			cin >> stud.fam;
-			cout << "Èìÿ" << endl;
+			cout << "Имя" << endl;
 			cin >> stud.im;
 			stud.im_inic[0] = stud.im[0];
 			stud.im_inic[1] = '.';
 			stud.im_inic[2] = '\0';
-			cout << "Îò÷åñòâî:" << endl;
+			cout << "Отчество:" << endl;
 			cin >> stud.otch;
 			stud.otch_inic[0] = stud.otch[0];
 			stud.otch_inic[1] = '.';
 			stud.otch_inic[2] = '\0';
-			cout << "Ãîä ðîæäåíèÿ" << endl;
+			cout << "Год рождения" << endl;
 			cin >> stud.brthd;
-			cout << "íîìåð ãðóïïû:" << endl;
+			cout << "номер группы:" << endl;
 			cin >> stud.gr;
-			cout << "Îöåíêà ïî ôèçèêå:" << endl;
+			cout << "Оценка по физике:" << endl;
 			cin >> stud.fiz;
-			cout << "îöåíêà ïî ìàòåìàòèêå:" << endl;
+			cout << "оценка по математике:" << endl;
 			cin >> stud.mat;
-			cout << "îöåíêà ïî èíôîðìàòèêå:" << endl;
+			cout << "оценка по информатике:" << endl;
 			cin >> stud.inf;
-			cout << "îöåíêà ïî õèìèè:" << endl;
+			cout << "оценка по химии:" << endl;
 			cin >> stud.chem;
 
 			stud.sr = (stud.chem + stud.inf + stud.mat + stud.fiz) / 4;
@@ -69,22 +69,22 @@ void sozdfile()
 			OemToCharA(stud.im_inic, stud.im_inic);
 			OemToCharA(stud.otch_inic, stud.otch_inic);
 			fout <<
-				"ÔÈÎ: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
-				"Ãîä ðîæäåíèÿ: " << stud.brthd << endl <<
-				"Íîìåð ãðóïïû: " << stud.gr << endl <<
-				"îöåíêè çà ñåìåñòð" << endl <<
-				"Ôèçèêà: " << stud.fiz << endl <<
-				"Ìàòåìàòèêà: " << stud.mat << endl <<
-				"Èíôîðìàòèêà: " << stud.inf << endl <<
-				"Õèìèÿ: " << stud.chem << endl <<
-				"Ñðåäíèé áàëë: " << stud.sr << endl << endl;
+				"ФИО: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
+				"Год рождения: " << stud.brthd << endl <<
+				"Номер группы: " << stud.gr << endl <<
+				"оценки за семестр" << endl <<
+				"Физика: " << stud.fiz << endl <<
+				"Математика: " << stud.mat << endl <<
+				"Информатика: " << stud.inf << endl <<
+				"Химия: " << stud.chem << endl <<
+				"Средний балл: " << stud.sr << endl << endl;
 
 			if (((stud.fiz == 4) || (stud.fiz == 5)) && (stud.mat > 8) && (stud.chem > 8) && (stud.inf > 8))
 			{
 				fout4 <<
-					"ÔÈÎ: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
-					"Ãîä ðîæäåíèÿ: " << stud.brthd << endl <<
-					"Íîìåð ãðóïïû: " << stud.gr << endl << endl;
+					"ФИО: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
+					"Год рождения: " << stud.brthd << endl <<
+					"Номер группы: " << stud.gr << endl << endl;
 			}
 		}
 
@@ -103,7 +103,7 @@ void prosmotr()
 	fin.open("myFILE.txt");
 	if (!fin.is_open())
 	{
-		cout << "Îøèáêà ÷òåíèÿ ôàéëà." << endl;
+		cout << "Ошибка чтения файла." << endl;
 	}
 	else
 	{
@@ -128,38 +128,38 @@ void add_inf()
 	Person stud;
 	if (!fout.is_open() || !fout4.is_open())
 	{
-		cout << "îøèáêà îòêðûòèÿ ôàéëà.";
+		cout << "ошибка открытия файла.";
 	}
 	else
 	{
-		cout << "Ñêîëüêî ñòóäåíòîâ íóæíî äîáàâèòü?" << endl;
+		cout << "Сколько студентов нужно добавить?" << endl;
 		int kol_of_stud;
 		cin >> kol_of_stud;
 		for (int i = 1; i <= kol_of_stud; i++)
 		{
-			cout << "Ôàìèëèÿ:" << endl;
+			cout << "Фамилия:" << endl;
 			cin >> stud.fam;
-			cout << "Èìÿ" << endl;
+			cout << "Имя" << endl;
 			cin >> stud.im;
 			stud.im_inic[0] = stud.im[0];
 			stud.im_inic[1] = '.';
 			stud.im_inic[2] = '\0';
-			cout << "Îò÷åñòâî:" << endl;
+			cout << "Отчество:" << endl;
 			cin >> stud.otch;
 			stud.otch_inic[0] = stud.otch[0];
 			stud.otch_inic[1] = '.';
 			stud.otch_inic[2] = '\0';
-			cout << "Ãîä ðîæäåíèÿ" << endl;
+			cout << "Год рождения" << endl;
 			cin >> stud.brthd;
-			cout << "íîìåð ãðóïïû:" << endl;
+			cout << "номер группы:" << endl;
 			cin >> stud.gr;
-			cout << "Îöåíêà ïî ôèçèêå:" << endl;
+			cout << "Оценка по физике:" << endl;
 			cin >> stud.fiz;
-			cout << "îöåíêà ïî ìàòåìàòèêå:" << endl;
+			cout << "оценка по математике:" << endl;
 			cin >> stud.mat;
-			cout << "îöåíêà ïî èíôîðìàòèêå:" << endl;
+			cout << "оценка по информатике:" << endl;
 			cin >> stud.inf;
-			cout << "îöåíêà ïî õèìèè:" << endl;
+			cout << "оценка по химии:" << endl;
 			cin >> stud.chem;
 
 			stud.sr = (stud.chem + stud.inf + stud.mat + stud.fiz) / 4;
@@ -167,22 +167,22 @@ void add_inf()
 			OemToCharA(stud.im_inic, stud.im_inic);
 			OemToCharA(stud.otch_inic, stud.otch_inic);
 			fout <<
-				"ÔÈÎ: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
-				"Ãîä ðîæäåíèÿ: " << stud.brthd << endl <<
-				"Íîìåð ãðóïïû: " << stud.gr << endl <<
-				"îöåíêè çà ñåìåñòð" << endl <<
-				"Ôèçèêà: " << stud.fiz << endl <<
-				"Ìàòåìàòèêà: " << stud.mat << endl <<
-				"Èíôîðìàòèêà: " << stud.inf << endl <<
-				"Õèìèÿ: " << stud.chem << endl <<
-				"Ñðåäíèé áàëë: " << stud.sr << endl << endl;
+				"ФИО: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
+				"Год рождения: " << stud.brthd << endl <<
+				"Номер группы: " << stud.gr << endl <<
+				"оценки за семестр" << endl <<
+				"Физика: " << stud.fiz << endl <<
+				"Математика: " << stud.mat << endl <<
+				"Информатика: " << stud.inf << endl <<
+				"Химия: " << stud.chem << endl <<
+				"Средний балл: " << stud.sr << endl << endl;
 
 			if (((stud.fiz == 4) || (stud.fiz == 5)) && (stud.mat > 8) && (stud.chem > 8) && (stud.inf > 8))
 			{
 				fout4 <<
-					"ÔÈÎ: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
-					"Ãîä ðîæäåíèÿ: " << stud.brthd << endl <<
-					"Íîìåð ãðóïïû: " << stud.gr << endl << endl;
+					"ФИО: " << stud.fam << " " << stud.im_inic << " " << stud.otch_inic << endl <<
+					"Год рождения: " << stud.brthd << endl <<
+					"Номер группы: " << stud.gr << endl << endl;
 			}
 		}
 
@@ -217,7 +217,7 @@ void clear()
 	fout4.open("task.txt");
 	if (!fout.is_open() && !fout4.is_open())
 	{
-		cout << "Îøèáêà îòêðûòèÿ ôàéëà." << endl;
+		cout << "Ошибка открытия файла." << endl;
 	}
 	else
 	{
@@ -226,7 +226,7 @@ void clear()
 	}
 	fout.close();
 	fout4.close();
-	cout << "Ôàéëû î÷èùåíû." << endl;
+	cout << "Файлы очищены." << endl;
 	system("pause");
 	system("cls");
 }
@@ -242,7 +242,7 @@ void edit()
 
 bool exit()
 {
-	cout << "Äî ñâèäàíèÿ." << endl;
+	cout << "До свидания." << endl;
 	return 0;
 }
 
@@ -253,7 +253,7 @@ int main()
 	int cikl = 1;
 	while (cikl == 1)
 	{
-		cout << " Âûáåðè ïóíêò:\n 1. Ñîçäàòü ôàéë.\n 2. Ïðîñìîòð.\n 3. Äîáàâèòü èíôîðìàöèþ.\n 4. Ðàñïå÷àòàòü àíêåòíûå äàííûå ñòóäåíòîâ, èìåþùèõ îöåíêè 4 èëè 5 ïî ôèçèêå è îöåíêó áîëüøå 8 ïî îñòàëüíûì ïðåäìåòàì\n 5. Î÷èñèòü ôàéë. \n 6. Ðåäàêòèðîâàòü \n 7. Âûõîä\n" << endl;
+		cout << " Выбери пункт:\n 1. Создать файл.\n 2. Просмотр.\n 3. Добавить информацию.\n 4. Распечатать анкетные данные студентов, имеющих оценки 4 или 5 по физике и оценку больше 8 по остальным предметам\n 5. Очисить файл. \n 6. Редактировать \n 7. Выход\n" << endl;
 		choice = _getch();
 
 		switch (choice)
@@ -265,7 +265,7 @@ int main()
 		case '5': system("cls"); clear(); break;
 		case '6': system("cls"); edit(); break;
 		case '7': system("cls"); cikl = exit(); break;
-		default:  system("cls"); cout << "âûáåðè öèôðó îò 1 äî 6!" << endl;
+		default:  system("cls"); cout << "выбери цифру от 1 до 6!" << endl;
 		}
 	} 
 	return 0;
