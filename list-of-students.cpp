@@ -30,11 +30,11 @@ void sozdfile()
 	Person stud;
 	if ((!fout.is_open()) || (!fout4.is_open()))
 	{
-		cout << "îøèáêà îòêðûòèÿ ôàéëà.";
+		cout << "ошибка открытия файла.";
 	}
 	else
 	{
-		cout << "Ñêîëüêî ñòóäåíòîâ âñåãî?" << endl;
+		cout << "Сколько студентов всего?" << endl;
 		int kol_of_stud;
 		cin >> kol_of_stud;
 		for (int i = 1; i <= kol_of_stud; i++)
